@@ -30,7 +30,7 @@ end
 	options
 	version
 }.each do |attrib|
-	node.set['nokogiri'][attrib] = node['fog_gem'][attrib]
+	node.default['nokogiri'][attrib] = node['fog_gem'][attrib]
 end
 
 include_recipe "nokogiri::chefgem"
